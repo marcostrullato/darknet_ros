@@ -47,8 +47,8 @@ endif ( X11_FOUND )
 
 # Find rquired packeges
 find_package(Boost REQUIRED COMPONENTS thread)
-find_package(OpenCV REQUIRED)
-include_directories(${OpenCV_INCLUDE_DIRS})
+find_package(OpenCV 3.4.0 REQUIRED PATHS "/opt/opencv/3.4.0")
+include_directories("/opt/opencv/3.4.0/include/opencv2")
 find_package(catkin REQUIRED
   COMPONENTS
     cv_bridge
